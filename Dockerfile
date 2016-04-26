@@ -29,7 +29,7 @@ RUN pip install requests[security]
 RUN pip install dns-lexicon
 
 # Create letsencrypt domains.txt file.
-RUN echo $URL > /srv/letsencrypt/domains.txt
+RUN echo $URI > /srv/letsencrypt/domains.txt
 
 
 CMD ["/srv/letsencrypt/letsencrypt.sh", "--cron", "--hook", "/srv/letsencrypt/letsencrypt.default.sh", "--challenge", "dns-01"]

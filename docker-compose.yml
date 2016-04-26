@@ -1,7 +1,9 @@
 dns-01:
-  image: sahsu/dns-01
+  image: dns-01
   environment:
-    URI: 
+    URI: ll.sahsu.mobi
     PROVIDER:
     LEXICON_CLOUDFLARE_USERNAME:
     LEXICON_CLOUDFLARE_TOKEN:
+  volumes:
+    - "/srv/letsencrypt/certs:/srv/letsencrypt/certs"

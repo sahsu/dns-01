@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-if [ "$URI" = "" -o "$PROVIDER" = "" -o "$LEXICON_CLOUDFLARE_USERNAME" = "" -o "$LEXICON_CLOUDFLARE_TOKEN" = "" ]; then
+if [ "$URI" = "" ]; then
 echo 'Usage:
 
 export URI=
@@ -15,4 +15,4 @@ export LEXICON_CLOUDFLARE_TOKEN=
 exit 1
 fi
 
-echo docker-compose up
+docker-compose up
